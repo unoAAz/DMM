@@ -3,7 +3,13 @@ let username;
 let userresult;
 
 username = prompt("お名前を教えて下さい。");//入力ダイアログを表示
-document.getElementById("name").innerHTML = username;//idがnameのタグに囲まれてる文字列をusernameで上書き
+if (username==""){
+  document.getElementById("name").innerHTML = "名無し"
+}
+
+else{
+  document.getElementById("name").innerHTML = username;//idがnameのタグに囲まれてる文字列をusernameで上書き
+}
 
 let rand = Math.floor( Math.random() * 5);
 if (rand == 0) {
